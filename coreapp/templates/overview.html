@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Overview - Pathwise{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/pages/overview.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="overview-container">
+    <div class="page-header">
+        <h1 class="page-title">Academic Overview</h1>
+        <p class="page-subtitle">Your academic standing and performance summary</p>
+    </div>
+    
+    <div class="overview-content">
+        <div class="overview-grid">
+            <div class="overview-card">
+                <h2 class="card-title">Current GPA</h2>
+                <p class="card-value">TBD</p>
+                <p class="card-description">Your current grade point average</p>
+            </div>
+            
+            <div class="overview-card">
+                <h2 class="card-title">Total Credits</h2>
+                <p class="card-value">TBD</p>
+                <p class="card-description">Credits completed this semester</p>
+            </div>
+            
+            <div class="overview-card">
+                <h2 class="card-title">Enrolled Courses</h2>
+                <p class="card-value">TBD</p>
+                <p class="card-description">Number of courses you're currently taking</p>
+            </div>
+        </div>
+        
+        <div class="overview-section">
+            <h2 class="section-title">Recent Activity</h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <p class="activity-text">Recent academic activity will be displayed here.</p>
+                    <span class="activity-date">Date: TBD</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

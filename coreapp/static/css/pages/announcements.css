@@ -1,0 +1,67 @@
+/* Announcements Page Specific Styles */
+.announcements-content {
+    width: 100%;
+}
+
+.announcements-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.announcement-item {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: box-shadow 0.2s;
+}
+
+.announcement-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.announcement-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a365d;
+    flex: 1;
+}
+
+.announcement-date {
+    font-size: 0.9rem;
+    color: #718096;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
+.announcement-body {
+    margin-top: 1rem;
+}
+
+.announcement-text {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .announcement-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .announcement-date {
+        margin-left: 0;
+    }
+}
+

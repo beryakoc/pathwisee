@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pathwise{% endblock %}</title>
+    
+    {% load static %}
+    <!-- Base CSS Files -->
+    <link rel="stylesheet" href="{% static 'css/base/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/footer.css' %}">
+    
+    <!-- Page-specific CSS -->
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navbar Block -->
+    {% block navbar %}
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="{% url 'home' %}">Pathwise</a>
+            </div>
+            <ul class="navbar-menu">
+                {% if user.is_authenticated %}
+                    <!-- Student View Links -->
+                    {% if is_student %}
+                        <li class="navbar-item"><a href="{% url 'home' %}">Home</a></li>
+                        <li class="navbar-item"><a href="{% url 'courses' %}">My Courses</a></li>
+                        <li class="navbar-item"><a href="{% url 'overview' %}">Overview</a></li>
+                        <li class="navbar-item"><a href="{% url 'announcements' %}">Announcements</a></li>
+                    {% endif %}
+                    
+                    <!-- Teacher View Links -->
+                    {% if is_teacher %}
+                        <li class="navbar-item"><a href="{% url 'courses' %}">My Courses</a></li>
+                        <li class="navbar-item"><a href="{% url 'announcements' %}">Announcements</a></li>
+                        <li class="navbar-item"><a href="{% url 'students' %}">Students</a></li>
+                    {% endif %}
+                    
+                    <!-- Department Head Links -->
+                    {% if is_department_head %}
+                        <li class="navbar-item"><a href="{% url 'management' %}">Management</a></li>
+                        <li class="navbar-item"><a href="{% url 'user_management' %}">User Management</a></li>
+                    {% endif %}
+                    
+                    <!-- Common Link -->
+                    <li class="navbar-item"><a href="{% url 'profile' %}">Profile</a></li>
+                {% else %}
+                    <!-- Show login link if not authenticated -->
+                    <li class="navbar-item"><a href="{% url 'admin:login' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    {% endblock %}
+    
+    <!-- Main Content Block -->
+    <main class="main-content">
+        {% if messages %}
+            <div class="messages-container">
+                {% for message in messages %}
+                    <div class="message message-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer Block -->
+    {% block footer %}
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; {% now "Y" %} Pathwise. All rights reserved.</p>
+                <p class="footer-subtext">Designed for academic excellence and administrative efficiency.</p>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+</body>
+</html>
+

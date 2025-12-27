@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Announcements - Pathwise{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/pages/announcements.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="announcements-container">
+    <div class="page-header">
+        <h1 class="page-title">Announcements</h1>
+        <p class="page-subtitle">Important notices and updates</p>
+    </div>
+    
+    <div class="announcements-content">
+        <div class="announcements-list">
+            <div class="announcement-item">
+                <div class="announcement-header">
+                    <h2 class="announcement-title">Announcement Title</h2>
+                    <span class="announcement-date">Date: TBD</span>
+                </div>
+                <div class="announcement-body">
+                    <p class="announcement-text">Announcement content will be displayed here. This is a placeholder for future announcements.</p>
+                </div>
+            </div>
+            
+            <div class="announcement-item">
+                <div class="announcement-header">
+                    <h2 class="announcement-title">Announcement Title</h2>
+                    <span class="announcement-date">Date: TBD</span>
+                </div>
+                <div class="announcement-body">
+                    <p class="announcement-text">Announcement content will be displayed here. This is a placeholder for future announcements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

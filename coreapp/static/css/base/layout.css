@@ -1,0 +1,116 @@
+/* Base Layout Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* Page Header Styles */
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a365d;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 400;
+}
+
+/* Container Styles */
+.home-container,
+.courses-container,
+.announcements-container,
+.profile-container,
+.students-container,
+.overview-container,
+.management-container {
+    width: 100%;
+}
+
+/* Grid Layouts */
+.info-grid,
+.courses-grid,
+.overview-grid,
+.management-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Messages */
+.messages-container {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.message {
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.message-success {
+    background-color: #c6f6d5;
+    color: #22543d;
+    border: 1px solid #9ae6b4;
+}
+
+.message-error {
+    background-color: #fed7d7;
+    color: #c53030;
+    border: 1px solid #fc8181;
+}
+
+.message-info {
+    background-color: #bee3f8;
+    color: #2c5282;
+    border: 1px solid #90cdf4;
+}
+
+.message-warning {
+    background-color: #feebc8;
+    color: #c05621;
+    border: 1px solid #fbd38d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .info-grid,
+    .courses-grid,
+    .overview-grid,
+    .management-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .messages-container {
+        padding: 0 1rem;
+    }
+}
+

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Management - Pathwise{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/pages/management.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="management-container">
+    <div class="page-header">
+        <h1 class="page-title">Management Dashboard</h1>
+        <p class="page-subtitle">Department administration and oversight</p>
+    </div>
+    
+    <div class="management-content">
+        <div class="management-grid">
+            <div class="management-card">
+                <h2 class="card-title">Department Statistics</h2>
+                <div class="stat-item">
+                    <span class="stat-label">Total Students:</span>
+                    <span class="stat-value">TBD</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Total Faculty:</span>
+                    <span class="stat-value">TBD</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Active Courses:</span>
+                    <span class="stat-value">TBD</span>
+                </div>
+            </div>
+            
+            <div class="management-card">
+                <h2 class="card-title">Quick Actions</h2>
+                <div class="action-list">
+                    <a href="#" class="action-link">Manage Courses</a>
+                    <a href="#" class="action-link">Manage Faculty</a>
+                    <a href="#" class="action-link">View Reports</a>
+                    <a href="#" class="action-link">System Settings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

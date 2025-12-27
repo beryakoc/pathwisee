@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Students - Pathwise{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/pages/students.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="students-container">
+    <div class="page-header">
+        <h1 class="page-title">Students</h1>
+        <p class="page-subtitle">Manage and view student information</p>
+    </div>
+    
+    <div class="students-content">
+        <div class="students-table-container">
+            <table class="students-table">
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TBD</td>
+                        <td>Student Name</td>
+                        <td>student@example.com</td>
+                        <td>Department</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>TBD</td>
+                        <td>Student Name</td>
+                        <td>student@example.com</td>
+                        <td>Department</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

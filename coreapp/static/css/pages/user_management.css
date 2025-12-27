@@ -1,0 +1,182 @@
+/* User Management Page Specific Styles */
+.user-management-container {
+    width: 100%;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header-content {
+    flex: 1;
+}
+
+.create-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #1a365d;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+    display: inline-block;
+}
+
+.create-button:hover {
+    background-color: #2c5282;
+    transform: translateY(-1px);
+}
+
+.users-content {
+    width: 100%;
+}
+
+.users-table-container {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.users-table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+}
+
+.users-table thead {
+    background-color: #1a365d;
+    color: #ffffff;
+}
+
+.users-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.users-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s;
+}
+
+.users-table tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+.users-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.users-table td {
+    padding: 1rem;
+    color: #2d3748;
+    font-size: 0.9rem;
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.role-student {
+    background-color: #c6f6d5;
+    color: #22543d;
+}
+
+.role-teacher {
+    background-color: #bee3f8;
+    color: #2c5282;
+}
+
+.role-department_head {
+    background-color: #fed7d7;
+    color: #c53030;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-active {
+    background-color: #c6f6d5;
+    color: #22543d;
+}
+
+.status-inactive {
+    background-color: #fed7d7;
+    color: #c53030;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 2rem;
+    color: #718096;
+    font-style: italic;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.page-link {
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    color: #1a365d;
+    text-decoration: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.page-link:hover {
+    background-color: #f7fafc;
+    border-color: #1a365d;
+}
+
+.page-info {
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .create-button {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .users-table {
+        font-size: 0.85rem;
+    }
+    
+    .users-table th,
+    .users-table td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+

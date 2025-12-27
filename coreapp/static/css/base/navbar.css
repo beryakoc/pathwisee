@@ -1,0 +1,79 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #1a365d;
+    color: #ffffff;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.navbar-brand a {
+    color: #ffffff;
+    transition: opacity 0.2s;
+}
+
+.navbar-brand a:hover {
+    opacity: 0.8;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.navbar-item {
+    margin: 0;
+}
+
+.navbar-item a {
+    display: block;
+    padding: 1rem 1.25rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar-item a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: #ffffff;
+}
+
+/* Role-based link classes - now handled via template conditionals */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+    
+    .navbar-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    .navbar-item a {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+

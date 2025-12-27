@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}My Courses - Pathwise{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/pages/courses.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="courses-container">
+    <div class="page-header">
+        <h1 class="page-title">My Courses</h1>
+        <p class="page-subtitle">Manage and view your course information</p>
+    </div>
+    
+    <div class="courses-content">
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-header">
+                    <h2 class="course-title">Course Title</h2>
+                    <span class="course-code">CS 101</span>
+                </div>
+                <div class="course-body">
+                    <p class="course-description">Course description and details will be displayed here.</p>
+                    <div class="course-meta">
+                        <span class="course-instructor">Instructor: TBD</span>
+                        <span class="course-schedule">Schedule: TBD</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-header">
+                    <h2 class="course-title">Course Title</h2>
+                    <span class="course-code">MATH 201</span>
+                </div>
+                <div class="course-body">
+                    <p class="course-description">Course description and details will be displayed here.</p>
+                    <div class="course-meta">
+                        <span class="course-instructor">Instructor: TBD</span>
+                        <span class="course-schedule">Schedule: TBD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

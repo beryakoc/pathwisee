@@ -1,0 +1,65 @@
+/* Students Page Specific Styles */
+.students-content {
+    width: 100%;
+}
+
+.students-table-container {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.students-table {
+    width: 100%;
+    min-width: 600px;
+}
+
+.students-table thead {
+    background-color: #1a365d;
+    color: #ffffff;
+}
+
+.students-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.students-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s;
+}
+
+.students-table tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+.students-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.students-table td {
+    padding: 1rem;
+    color: #2d3748;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .students-table-container {
+        border-radius: 0;
+    }
+    
+    .students-table {
+        font-size: 0.85rem;
+    }
+    
+    .students-table th,
+    .students-table td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+

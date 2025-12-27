@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Profile - Pathwise{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/pages/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+    <div class="page-header">
+        <h1 class="page-title">Profile</h1>
+        <p class="page-subtitle">Your account information and settings</p>
+    </div>
+    
+    <div class="profile-content">
+        <div class="profile-card">
+            <div class="profile-section">
+                <h2 class="section-title">Personal Information</h2>
+                <div class="info-row">
+                    <span class="info-label">Username:</span>
+                    <span class="info-value">{{ user.username }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Name:</span>
+                    <span class="info-value">{{ user.get_full_name|default:"—" }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email:</span>
+                    <span class="info-value">{{ user.email|default:"—" }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Role:</span>
+                    <span class="info-value">{{ user.profile.get_role_display }}</span>
+                </div>
+            </div>
+            
+            <div class="profile-section">
+                <h2 class="section-title">Academic Information</h2>
+                <div class="info-row">
+                    <span class="info-label">Department:</span>
+                    <span class="info-value">{{ user.profile.department|default:"—" }}</span>
+                </div>
+                {% if user.profile.student_id %}
+                <div class="info-row">
+                    <span class="info-label">Student ID:</span>
+                    <span class="info-value">{{ user.profile.student_id }}</span>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="profile-section">
+                <h2 class="section-title">Account Settings</h2>
+                <div class="info-row">
+                    <span class="info-label">Password:</span>
+                    <span class="info-value">
+                        <a href="{% url 'change_password' %}" class="action-link">Change Password</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
